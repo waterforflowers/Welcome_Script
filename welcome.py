@@ -7,5 +7,12 @@ def print_welcome_message(name):
     """
     print(f"Hey there, {name}! So glad you're here. Let's make some magic happen! ✨")
 
-# Call the function with your name
-print_welcome_message("Darryl")
+# --- Modified Code Starts Here ---
+
+# 1. Ask the user for their name using the 'input()' function
+#    The user's response is then stored directly into the 'user_name' variable.
+user_name = input("What's your name? ")
+
+# 2. Call the 'print_welcome_message' function
+#    We pass the value stored in the 'user_name' variable to the function.
+print_welcome_message(user_name)
