@@ -1,14 +1,20 @@
 import datetime # Import the datetime module to work with dates and times
 
-def greet_user(name, time_of_day):
+def greet_user(name, time_of_day): # time_of_day is kept for function signature consistency, but not used in the new logic
     """
-    Prints a personalized welcome message based on the time of day.
+    Prints a personalized welcome message based on the name.
+    Special greeting for "Darryl", general greeting for others.
 
     Args:
         name (str): The name of the person to greet.
-        time_of_day (str): A string indicating the time of day (e.g., "Good morning", "Good afternoon").
+        time_of_day (str): (Not used in this version due to specific name-based greeting).
     """
-    print(f"{time_of_day}, {name}! So glad you're here. Let's make some magic happen! ✨")
+    if name.lower() == "darryl": # Using .lower() to make it case-insensitive for "darryl"
+        print("OH SNAP! IT'S DARRYL! (fangirls and faints) 🤩😵‍💫")
+    else:
+        print(f"WELCOME TO THE PAGE, {name.upper()}! 🎉") # Using .upper() for a more enthusiastic welcome
+    print("Let's make some magic happen! ✨") # This line will always print after the initial name-based greeting
+
 
 def print_farewell_message(name, favorite_item):
     """
@@ -45,9 +51,12 @@ while not user_name.strip(): # .strip() removes leading/trailing whitespace
     user_name = input("Oops! You didn't enter a name. What's your name? ")
 
 # 2. Get the personalized time-of-day greeting.
+#    Although the greet_user function no longer uses this directly for the main greeting,
+#    we keep this call for potential future use or if other parts of the script were to need it.
 current_greeting = get_time_of_day_greeting()
 
 # 3. Print the personalized welcome message using the greeting function.
+#    The 'time_of_day' argument is passed, but the function's internal logic now prioritizes the name check.
 greet_user(user_name, current_greeting)
 
 # 4. Ask the user for their favorite thing.
@@ -68,6 +77,8 @@ while True: # This loop will continue until the user decides to exit
 
     if choice == '1':
         # Re-greet the user
+        # Note: The 'time_of_day' greeting logic is still available through get_time_of_day_greeting()
+        # but the greet_user function will apply the Darryl-specific logic.
         current_greeting = get_time_of_day_greeting() # Get updated time of day
         greet_user(user_name, current_greeting)
     elif choice == '2':
