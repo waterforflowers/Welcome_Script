@@ -82,6 +82,7 @@ while not favorite_thing.strip():
     favorite_thing = input("Come on, tell me! What's one of your favorite things? ")
 
 # 5. Interactive Menu
+welcome_attempts = 0  # Counter for option 1 selections
 while True: # This loop will continue until the user decides to exit
     print("\n--- What would you like to do? ---")
     print("1. Get another welcome message")
@@ -91,8 +92,13 @@ while True: # This loop will continue until the user decides to exit
     choice = input("Enter your choice (1, 2, or 3): ")
 
     if choice == '1':
-        # Display a message about saving welcome messages
-        print("Don't be greedy! Save some welcome messages for the rest of us! 😄")
+        welcome_attempts += 1
+        if welcome_attempts == 1:
+            print("Don't be greedy! Save some welcome messages for the rest of us! 😄")
+        elif welcome_attempts == 2:
+            print("Hey, what did I just say? 🤨")
+        else:
+            print("Hey! Stop that! 😤")
     elif choice == '2':
         # Provide a random fun fact
         print(random.choice(PYTHON_FUN_FACTS))
