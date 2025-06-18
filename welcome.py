@@ -1,4 +1,19 @@
 import datetime # Import the datetime module to work with dates and times
+import random # Import random module for selecting random fun facts
+
+# List of fun facts about Python
+PYTHON_FUN_FACTS = [
+    "Python was named after the British comedy group Monty Python! 🐍",
+    "Python was created by Guido van Rossum and was first released in 1991! 📅",
+    "Python is one of the most popular programming languages in the world! 🌍",
+    "Python's design philosophy emphasizes code readability with its notable use of significant whitespace! 📝",
+    "Python can be used to build websites, games, AI, data analysis, and much more! 🚀",
+    "Python has a 'batteries included' philosophy, meaning it comes with a large standard library! 🔋",
+    "Python is used by major companies like Google, Netflix, and Instagram! 💼",
+    "Python's syntax is designed to be intuitive and readable, making it great for beginners! 📚",
+    "Python has a huge community of developers and over 200,000 packages available! 👥",
+    "Python can run on almost any platform - Windows, Mac, Linux, and even mobile devices! 💻"
+]
 
 def greet_user(name, time_of_day): # time_of_day is kept for function signature consistency, but not used in the new logic
     """
@@ -76,14 +91,11 @@ while True: # This loop will continue until the user decides to exit
     choice = input("Enter your choice (1, 2, or 3): ")
 
     if choice == '1':
-        # Re-greet the user
-        # Note: The 'time_of_day' greeting logic is still available through get_time_of_day_greeting()
-        # but the greet_user function will apply the Darryl-specific logic.
-        current_greeting = get_time_of_day_greeting() # Get updated time of day
-        greet_user(user_name, current_greeting)
+        # Display a message about saving welcome messages
+        print("Don't be greedy! Save some welcome messages for the rest of us! 😄")
     elif choice == '2':
-        # Provide a fun fact
-        print("Did you know? Python was named after the British comedy group Monty Python! 🐍")
+        # Provide a random fun fact
+        print(random.choice(PYTHON_FUN_FACTS))
     elif choice == '3':
         # Exit the loop and print farewell message
         print_farewell_message(user_name, favorite_thing)
