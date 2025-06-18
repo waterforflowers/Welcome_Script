@@ -2,7 +2,7 @@
 
 
 
-**Welcome Script**
+**- Welcome Script**
 
 - A fun and interactive Python script that greets users, offers interesting Python facts, and bids them farewell, all with a touch of personality!
 
