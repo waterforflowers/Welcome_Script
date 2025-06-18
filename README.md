@@ -12,7 +12,7 @@
   
 - **_Time-based Welcome_**: Automatically provides a "Good morning," "Good afternoon," or "Good evening" greeting based on the current time of day when the script starts.
   
-- _Special "Darryl" Welcome_: If the user enters "Darryl" (case-insensitive) as their name, they receive a unique, enthusiastic greeting. Otherwise, a general welcome message is displayed.
+- **_Special "Darryl" Welcome_**: If the user enters "Darryl" (case-insensitive) as their name, they receive a unique, enthusiastic greeting. Otherwise, a general welcome message is displayed.
 
 **- User Interaction:**
 
