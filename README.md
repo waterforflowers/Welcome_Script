@@ -41,7 +41,9 @@
 - **_Open a terminal or command prompt_**: Navigate to the directory where you saved welcome.py.
 
 - **_Run the script_**: Type the following command and press Enter:
-  Bash
-  python welcome.py
+  
+  - Bash
+    
+  - python welcome.py
   
 - **_Follow the prompts_**: The script will ask for your name and a favorite item, then present the interactive menu.
